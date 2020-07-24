@@ -4,11 +4,11 @@ module.exports = {
     module: {
         rules: [{
                 test: /.js$/,
-                use: ['babel-loader']
+                use: ["babel-loader"]
             },
             {
                 test: /.css$/,
-                use: ['style-loader', 'css-loader']
+                use: ["style-loader", "css-loader"]
             },
         ]
     },
