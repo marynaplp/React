@@ -3,24 +3,14 @@ import ReactDOM from 'react-dom'
 import './styles.css'
 
 
-const rootElement = document.querySelector('#root');
+const rootElement = document.querySelector("#root");
 
-const element = React.createElement(
-    'div', {
-        className: 'greeting'
-    }, [
-        React.createElement(
-            'div', {
-                className: 'greeting__title'
-            },
-            'Hello, world!'
-        ),
-        React.createElement(
-            'div', {
-                className: 'greeting__text'
-            },
-            'I\'m learning React'
-        ),
-    ]
+const element = ( <
+    div className = "greeting" >
+    <
+    div className = "greeting__title" > Hello, world! < /div> <
+    div className = "greeting__text" > I 'm learning React</div> <
+    /div>
 );
+
 ReactDOM.render(element, rootElement);
