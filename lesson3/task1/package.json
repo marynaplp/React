@@ -3,8 +3,9 @@
     "version": "1.0.0",
     "main": "webpack.config.js",
     "scripts": {
-        "start": "webpack-dev-server -d --devtool eval-source-maps --open",
-        "build": "webpack -p"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack -p",
+        "start": "webpack-dev-server -d --devtool eval-source-maps --open"
     },
     "author": "",
     "license": "ISC",
