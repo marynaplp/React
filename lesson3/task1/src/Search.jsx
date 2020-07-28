@@ -1,5 +1,5 @@
 
-const Search =() => {
+const Search =(props) => {
     return (
 <div class="search">
     <h1 class="search__title">{`Hello, ${props.name}. What to search for you?`}</h1>
