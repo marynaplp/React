@@ -1,10 +1,10 @@
 
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-//import "./index.scss";
+import "./index.scss";
 import "./search.scss";
 import Search from "./search.js";
 
-const rootElem = document.querySelector("#root");
+const rootElement = document.querySelector("#root");
 
-ReactDOM.render(<Search name="Tom" />, rootElem);
+ReactDOM.render(<Search name="Tom" />, rootElement);
