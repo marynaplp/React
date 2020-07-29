@@ -1,5 +1,5 @@
 import React from "react";
-import Greeting from "./Greeting.js";
+import Greeting from "./Greeting.jsx";
 
 const App = () => {
     return (
