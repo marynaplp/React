@@ -1,5 +1,5 @@
 import React from "react";
-import Comment from "./Comment";
+import Greeting from "./Greeting";
 
 const userInfo = {
   name: "Tom",
