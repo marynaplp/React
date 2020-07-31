@@ -5,4 +5,4 @@ import "./index.scss";
 
 const rootElement = document.querySelector("#root");
 
-ReactDOM.render( < Counter /> , rootElement);
+ReactDOM.render( <Counter /> , rootElement);
