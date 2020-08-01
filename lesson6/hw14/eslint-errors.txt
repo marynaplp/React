@@ -1,6 +1,0 @@
-1.no-var
-2.eqeqeq
-3.no-undef
-4.no-plusplus
-5.no-return-assign
-6.no-undef
