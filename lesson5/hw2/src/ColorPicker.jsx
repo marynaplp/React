@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 
 const CORAL = "Coral";
-const AUQA = "Auqa";
+const AQUA = "Aqua";
 const BISQUE = "Bisque";
 
 
@@ -20,7 +20,7 @@ class ColorPicker extends Component {
 
   hideColorName = () => {
     this.setState({
-      showIn: "",
+     showIn: '',
     });
   };
 
@@ -36,7 +36,7 @@ class ColorPicker extends Component {
           ></button>
           <button
             class="picker__button picker__button_aqua"
-            onMouseOver={() => this.showColorName(AUQA)}
+            onMouseOver={() => this.showColorName(AQUA)}
             onMouseOut={this.hideColorName}
           ></button>
           <button
