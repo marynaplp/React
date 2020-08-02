@@ -5,7 +5,6 @@ const CORAL = "Coral";
 const AQUA = "Aqua";
 const BISQUE = "Bisque";
 
-
 class ColorPicker extends Component {
   constructor(props) {
     super(props);
@@ -20,14 +19,14 @@ class ColorPicker extends Component {
 
   hideColorName = () => {
     this.setState({
-     showIn: '',
+      showIn: "",
     });
   };
 
   render() {
     return (
       <div>
-        <div className="picker__title"> {`${this.state.showIn}`}</div>
+        <div className="picker__title">{`${this.state.showIn}`}</div>
         <div>
           <button
             className="picker__button picker__button_coral"
@@ -35,12 +34,12 @@ class ColorPicker extends Component {
             onMouseOut={this.hideColorName}
           ></button>
           <button
-            class="picker__button picker__button_aqua"
+            className="picker__button picker__button_aqua"
             onMouseOver={() => this.showColorName(AQUA)}
             onMouseOut={this.hideColorName}
           ></button>
           <button
-            class="picker__button picker__button_bisque"
+            className="picker__button picker__button_bisque"
             onMouseOver={() => this.showColorName(BISQUE)}
             onMouseOut={this.hideColorName}
           ></button>
@@ -49,4 +48,5 @@ class ColorPicker extends Component {
     );
   }
 }
+
 export default ColorPicker;
