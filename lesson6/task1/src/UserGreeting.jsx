@@ -1,4 +1,4 @@
-//describe component which describes title with text Hello user
+//describe component wh
 
 import React from "react";
 
