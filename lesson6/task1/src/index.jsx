@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Colors from "./Colors";
 import "./index.scss";
+import Auth from "./Auth.jsx";
+
 
 const rootElement = document.querySelector("#root");
 
-ReactDOM.render(<Colors /> , rootElement);
+ReactDOM.render(<Auth /> , rootElement);
