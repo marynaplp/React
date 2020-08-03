@@ -1,8 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Colors from "./Colors";
-import "./index.scss";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.scss';
+import Page from './Page';
 
-const rootElement = document.querySelector("#root");
+const rootElement = document.querySelector('#root');
 
-ReactDOM.render(<Colors /> , rootElement);
+ReactDOM.render(<Page />, rootElement);
