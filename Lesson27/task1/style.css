@@ -64,12 +64,12 @@
   color: #FFFFFF;
   margin: 39px 26px 42px 26px;
 }
-.price-card__list {
+.price-card__options-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-.price-card__list-item {
+.price-card__options-list-item {
   font-weight: 300;
   font-size: 15px;
   line-height: 18px;
@@ -79,11 +79,11 @@
   align-items: center;
   height: 50px;
 }
-.price-card__list-item:nth-child(odd) {
+.price-card__options-list-item:nth-child(odd) {
   background: #2A343850;
   mix-blend-mode: normal;
 }
-.price-card__list-mark {
+.price-card__options-list-mark {
   width: 15px;
   height: 13px;
   margin-left: 22px;
