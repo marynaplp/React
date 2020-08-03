@@ -1,63 +1,60 @@
 * {
   box-sizing: border-box;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .page {
+  height: 100%;
   display: flex;
-  height: 100vh;
-  justify-content: center;
+  background-color: black;
   align-items: center;
-  background: black;
+  justify-content: center;
 }
 
 .price-card {
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
+  position: relative;
   width: 380px;
   height: 770px;
-  background: #334247;
-  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.087466);
-  margin: 18px;
-  position: relative;
+  background-color: #334247;
+  margin: 15px;
   overflow: hidden;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.087466);
 }
 .price-card__title {
+  width: 100px;
+  height: 64px;
   font-weight: 700;
   font-size: 35px;
-  line-height: 43px;
-  text-align: center;
   color: #FFFFFF;
   margin: auto;
   margin-top: 30px;
   margin-bottom: 36px;
-  width: 100px;
-  height: 64px;
 }
 .price-card__title-main {
   margin: 0;
   font-weight: 700;
   font-size: 35px;
   line-height: 43px;
-  text-align: center;
   color: #FFFFFF;
 }
 .price-card__subtitle {
   font-weight: 300;
   font-size: 20px;
   line-height: 24px;
-  color: #FFFFFF;
   text-align: center;
+  color: #FFFFFF;
   margin: 0;
 }
 .price-card__price {
-  text-align: center;
-  background: #5BB189;
-  color: #FFFFFF;
+  margin: 0;
   font-size: 55px;
   line-height: 67px;
-  height: 105px;
-  padding: 18px 110px;
-  margin: 0;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #5BB189;
+  padding: 18px;
 }
 .price-card__description {
   font-weight: 300;
@@ -69,7 +66,6 @@
 }
 .price-card__list {
   list-style-type: none;
-  color: white;
   padding: 0;
   margin: 0;
 }
@@ -84,10 +80,10 @@
   height: 50px;
 }
 .price-card__list-item:nth-child(odd) {
-  background: #2A3438;
+  background: #2A343850;
   mix-blend-mode: normal;
 }
-.price-card__checkmark-symbol_blue, .price-card__checkmark-symbol_green, .price-card__checkmark-symbol_orange {
+.price-card__list-mark {
   width: 15px;
   height: 13px;
   margin-left: 22px;
@@ -107,11 +103,23 @@
   outline: none;
   border: none;
 }
-.price-card .second {
-  background: #3A6BA5;
+
+.second {
+  background-color: #3A6BA5;
 }
-.price-card .third {
-  background: #EC632A;
+
+.second-title {
+  width: 164px;
+  height: 64px;
+}
+
+.third-title {
+  width: 176px;
+  height: 64px;
+}
+
+.third {
+  background-color: #EC632A;
 }
 
 .popular {
@@ -131,16 +139,6 @@
   justify-content: center;
   overflow: hidden;
   text-transform: uppercase;
-}
-
-.third-title {
-  width: 176px;
-  height: 64px;
-}
-
-.second-title {
-  width: 163px;
-  height: 64px;
 }
 
 /*# sourceMappingURL=style.css.map */
