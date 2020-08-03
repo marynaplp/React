@@ -1,41 +1,8 @@
-
-import React, { Component } from "react";
-
-const RED = "#f00";
-const GREEN = "#0f0";
-const BLUE = "#00f";
+import React from "react";
 
 
-class Colors extends Component {
-  setBodyColor = (color) => {
-    document.body.style.backgroundColor = color;
-  };
-  render() {
-    return (
-      <div class="colors">
-        <button
-          style={{
-            backgroundColor: RED,
-          }}
-          onClick={() => this.setBodyColor(RED)}
-          className="colors__button"
-        />
-        <button
-          style={{
-            backgroundColor: GREEN,
-          }}
-          onClick={() => this.setBodyColor(GREEN)}
-          className="colors__button"
-        />
-        <button
-          style={{
-            backgroundColor: BLUE,
-          }}
-          onClick={() => this.setBodyColor(BLUE)}
-          className="colors__button"
-        />
-      </div>
-    );
-  }
+const Login = ({onLogin}) => {
+    return <button onClick={onLogin}>Login</button>;
 }
-export default Colors;
+
+export default Login
