@@ -49,29 +49,4 @@ import Logout from "./Logout"
    }
  }
  export default Auth;
-
-//    handleLogIn = () => {
-//      this.setState({
-//        isLoggedIn: true,
-//      });
-//    };
-//    handleLogOut = () => {
-//      this.setState({
-//        isLoggedIn: false,
-//      });
-//    };
-//    render() {
-//      return (
-//        <div className="panel">
-//          <Greeting isLoggedIn={this.state.isLoggedIn} />
-//          <div>
-//            {this.state.isLoggedIn ? (
-//              <Logout onLogout={this.handleLogOut} />
-//            ) : (
-//              <Login onLogin={this.handleLogIn} />
-//            )}
-//          </div>
-//        </div>
-//      );
-//    }
-//  }
+   
