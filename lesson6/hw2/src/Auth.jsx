@@ -13,12 +13,12 @@ import Logout from "./Logout"
        isLoading: false,
      };
    }
-   onLogin = () => {
+   handleLogin = () => {
      this.setState({
        isLoggedIn: true,
      });
    };
-   onLogout = () => {
+   handleLogout = () => {
      this.setState({
        isLoggedIn: false,
      });
@@ -36,9 +36,9 @@ import Logout from "./Logout"
    };
    render() {
      const button = !this.state.isLoggedIn ? (
-       <Login onLogin={this.onLogIn} />
+       <Login onLogin={this.handleLogin} />
      ) : (
-       <Logout onLogout={this.onLogOut} />
+       <Logout onLogout={this.handleLog} />
      );
 
      return (
