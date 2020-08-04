@@ -15,30 +15,40 @@ import Logout from "./Logout"
    }
    onLogin = () => {
      this.setState({
-       isLoading: true,
+       isLoggedIn: true,
      });
-     setTimeout(() => {
-       this.setState({
-         isLoading: false,
-         inLoggedIn:true
-       });
-     }, 2000);
    };
    onLogout = () => {
      this.setState({
        isLoggedIn: false,
      });
    };
+   onLoading = () => {
+     this.setState({
+       isLoading: true,
+     });
+     setTimeout(() => {
+       this.setState({
+         isLoading: false,
+         inLoggedIn: true,
+       });
+     }, 2000);
+   };
    render() {
-     if (isLoading.this.stae){
-       return <Spinner size={20} />
-     }
-     if(inLoggedIn.this.state){
-     return <Logout onLogout={this.Logout} />
-     }
-     return <Login onLogin={this.Login} />
-   } 
+     const button = !this.state.isLoggedIn ? (
+       <Login onLogin={this.onLogIn} />
+     ) : (
+       <Logout onLogout={this.onLogOut} />
+     );
+
+     return (
+       <div className="main">
+         {this.state.isLoading ? <Spinner size={50} /> : button}
+       </div>
+     );
+   }
  }
+ export default Auth;
 
 //    handleLogIn = () => {
 //      this.setState({
@@ -65,4 +75,3 @@ import Logout from "./Logout"
 //      );
 //    }
 //  }
-export default Auth

@@ -6,4 +6,4 @@ import Auth from "./Auth.jsx";
 
 const rootElement = document.querySelector("#root");
 
-ReactDOM.render(<Auth size={[]}/> , rootElement);
+ReactDOM.render(<Auth /> , rootElement);
