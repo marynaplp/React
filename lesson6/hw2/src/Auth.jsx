@@ -29,8 +29,8 @@ import Logout from "./Logout"
      });
      setTimeout(() => {
        this.setState({
-         isLoading: false,
-         inLoggedIn: true,
+         isLoading: true,
+         inLoggedIn: false,
        });
      }, 2000);
    };
