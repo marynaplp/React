@@ -1,13 +1,13 @@
-
+// describes component which output name and age user in property name and age and show the data of users
 import React from "react";
 
-const GoodButton = () => (
-<button 
-    className="fancy-button"
-    onClick={()=> alert ("Good job!")}
-    >
-        Click me!
-    </button>
+const User = ({name, age}) => {
+    return (
+        <li key={name} className="user">
+            <span className="user__name">{name}</span>
+            <span className="user__age">{age}</span>
+        </li>
     )
+}
 
-export default GoodButton;
+export default User;

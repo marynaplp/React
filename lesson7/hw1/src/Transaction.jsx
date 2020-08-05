@@ -1,0 +1,2 @@
+//describes component which accepts data about the transaction in properties from, to, amount, rate, time. Show data about transaction in coicidence wiht example layout. Dates formatted wiht help of library  moment.js. Numbers create with help of new Inti.NumberFormat, local - en-GB
+   
