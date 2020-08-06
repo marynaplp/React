@@ -1,5 +1,5 @@
 // describes the components which accepts in Properties  goPrev- function to turn on the previous page, goNext - function to turn on the next page, currentPage- current page, totalItems - all elements in the list;  
-import React, { Component } from "react";
+import React from "react";
 
 const Pagination = ({
   goPrev,
