@@ -10,7 +10,7 @@ const Pagination = ({
 }) => {
   const isPrevPageAvaible = currentPage === 0;
   const isNextPageAvaible =
-    currentPage === (totalItems / itemsPerPage) - 1;
+    currentPage === Math.ceil(totalItems / itemsPerPage) - 1;
 
   return (
     <div className="pagination">
