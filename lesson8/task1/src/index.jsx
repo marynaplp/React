@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Mailbox from "./Mailbox";
 import "./index.scss";
+import "/.Life.jsx"
+
+
 
 const rootElement = document.querySelector("#root");
 
-ReactDOM.render(<Mailbox unreadMessages={[]}/> , rootElement);
+ReactDOM.render(<Life /> , rootElement);
