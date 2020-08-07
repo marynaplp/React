@@ -23,7 +23,7 @@ class Life extends Component {
     console.log("componentDidUpdate (prevProps, prevState): some updates based on new props");
     }
     render (){
-        console.log("return React element to build DOMß");
+        console.log("return React element to build DOM");
 
     }
 }
