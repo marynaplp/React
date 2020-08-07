@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
-import "./Life.jsx"
+import Life from "./Life.jsx"
 
 
 
