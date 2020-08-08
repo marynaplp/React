@@ -9,7 +9,7 @@ class UserForm extends Component {
     about: ""
   }
 handleChange = event => {
-  const { name, value, checked} = event.target
+  const { name, value, checked, type} = event.target
   const val =  type ==="checkbox" ? checked :value
   this.setState({
     [name]: val
@@ -17,8 +17,7 @@ handleChange = event => {
 }
 
 handleSubmit = event => {
-  event.preventDefault
- ();
+  event.preventDefault();
  this.props.onSubmit(this.state);
 console.log(this.state)}
   render() {
@@ -59,8 +58,8 @@ console.log(this.state)}
           <select
             name="occupation"
             value={this.state.occupation}
-            className="form-input"
             onChange={this.handleChange}
+            className="form-input"
           >
             <option value="london">London</option>
             <option value="new-york">New York</option>
@@ -75,8 +74,8 @@ console.log(this.state)}
           <textarea
             name="about"
             value={this.state.about}
-            className="form-input"
             onChange={this.handleChange}
+            className="form-input"
           />
         </div>
         <button className="submit-button" type="submit">
