@@ -1,7 +1,7 @@
 
 import React, { Component } from "react";
 
-class Connection extends Component {
+class ConnectionStatus extends Component {
   state = {
     status: 'online',
   }
