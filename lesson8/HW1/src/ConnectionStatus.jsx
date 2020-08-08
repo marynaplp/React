@@ -3,28 +3,32 @@ import React, { Component } from "react";
 
 class ConnectionStatus extends Component {
   state = {
-    status: 'online',
-  }
-changeStatus =(e) =>{
-  this.setState({
-    status: e.type,
-  })
-}
-
+    status: "online",
+  };
+  changeStatus = (e) => {
+    this.setState({
+      status: e.type,
+    });
+  };
 
   componentDidMount() {
-    window.addEventListener("online", this.status)
+    window.addEventListener("online", this.status);
     window.addEventListener("offline", this.state);
   }
-  componentWillUnmount(){
+  componentWillUnmount() {
     window.removeEventListener("online", this.status);
     window.removeListener("offline", this.state);
   }
-  changeClassStatus = (status) => `status ${status === "offline" ? "status_offline" : "" }`
-   render() {
+  changeClassName = (status) =>
+    `status ${status === "offline" ? "status_offline" : ""}`;
 
-   return <div className={this.changeClassStatus(this.state.status)}>{this.state.status}</div>;
-    }
+  render() {
+    return (
+      <div className={this.changeClassName(this.state.status)}>
+        {this.state.status}
+      </div>
+    );
+  }
 }
 
 export default ConnectionStatus;
