@@ -12,12 +12,12 @@ class ConnectionStatus extends Component {
   };
 
   componentDidMount() {
-    window.addEventListener("online", this.status);
-    window.addEventListener("offline", this.state);
+    window.addEventListener("online", this.changeStatus);
+    window.addEventListener("offline", this.changeStatus);
   }
   componentWillUnmount() {
-    window.removeEventListener("online", this.status);
-    window.removeEventListener("offline", this.state);
+    window.removeEventListener("online", this.changeStatus);
+    window.removeEventListener("offline", this.changeStatus);
   }
   changeClassName = (status) =>
     `status ${status === "offline" ? "status_offline" : ""}`;
