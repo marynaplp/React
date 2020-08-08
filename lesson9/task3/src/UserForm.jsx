@@ -5,12 +5,13 @@ class UserForm extends Component {
 
 handleSubmit = event =>{
   event.preventDefault();
+ 
   const formData = [...new FormData(this.formRef)]
   .reduce((acc, [name,value] ) =>({...acc, [name]: value}), {}
   );
+   this.props.onSubmit(formData);
   console.log(formData)
 }
-
 setRef = node => {
   //this.setState({formRef:node})
   this.formRef = node
