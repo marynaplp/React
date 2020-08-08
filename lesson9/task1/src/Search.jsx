@@ -25,10 +25,4 @@ class Search extends Component {
   }
 }
   
-  
-
-  
-
-  
-
-export default ConnectionStatus;
+  export default Search;
