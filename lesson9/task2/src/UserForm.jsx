@@ -19,6 +19,7 @@ handleChange = event => {
 handleSubmit = event => {
   event.preventDefault
  ();
+ this.props.onSubmit(this.state);
 console.log(this.state)}
   render() {
     return (
