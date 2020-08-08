@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import User from "./User";
 import "./index.scss";
+import Life from "./Life.jsx"
+
+
 
 const rootElement = document.querySelector("#root");
 
-ReactDOM.render(<User userId="facebook" /> , rootElement);
+ReactDOM.render(<Life /> , rootElement);
