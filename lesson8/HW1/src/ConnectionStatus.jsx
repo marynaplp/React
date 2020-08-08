@@ -1,39 +1,30 @@
 
 import React, { Component } from "react";
 
-class User extends Component {
+class Connection extends Component {
   state = {
-    user: null
+    status: 'online',
   }
+changeStatus =(e) =>{
+  this.setState({
+    status: e.type,
+  })
+}
+
 
   componentDidMount() {
-    this.fetchUser(this.props.userId)
+    window.addEventListener("online", this.status)
+    window.addEventListener("offline", this.state);
   }
-  fetchUser = userId => {
- fetch(`https://api.github.com/users/${this.props.userID}`)
-   .then((response) => response.json())
-   .then((data) =>
-     this.setState({
-       user: data,
-     })
-   );
+  componentWillUnmount(){
+    window.removeEventListener("online", this.status);
+    window.removeListener("offline", this.state);
   }
-  render() {
-    const { user } = this.state; 
-if(!user){
-  return null
-}
-const { avatar_url, location, name } = user
-    return (
-            <div className="user">
-                <img alt="User Avatar" src={avatar_url} className="user__avatar" />
-                <div className="user__info">
-                    <span className="user__name">{name}</span>
-                    <span className="user__location">{location}</span>
-                </div>
-            </div>
-        );
+  changeClassStatus = (status) => `status ${status === "offline" ? "status_offline" : "" }`
+   render() {
+
+   return <div className={this.changeClassStatus(this.state.status)}>{this.state.status}</div>;
     }
 }
 
-export default User;
+export default ConnectionStatus;
