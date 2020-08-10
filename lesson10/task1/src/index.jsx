@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import UsersList from "./UsersListß";
+import App from "./App.jsx";
 import "./index.scss";
 
 const rootElement = document.querySelector("#root");
 
 
-ReactDOM.render(<UsersList users={users} />, rootElement);;
+ReactDOM.render(<App userId="git" />, rootElement);;
