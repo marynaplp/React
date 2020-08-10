@@ -10,8 +10,11 @@ class UsersList extends Component {
       name: "",
     };
   }
-  onChange = (event) => {
-    this.setState({ value: event.target.value }); // колбек который передает изменения из инпута в компонету UsersList
+  onChange = (e) => {
+    const { value } = e.target;
+    this.setState({
+      name: value,
+    });
   };
   render() {
     const usersList = this.props.users
