@@ -11,25 +11,26 @@ class Page extends Component {
     this.fetchUser(this.props.userId);
   }
 
-  fetchUser = (userId) => {
-    fetch(`https://api.github.com/users/${userId}`)
+  fetchUserData = (userId) => {
+    const userUrl = `https://api.github.com/users/${userId}`;
+    fetch(userUrl)
       .then((response) => response.json())
-      .then((data) => {
+      .then((userData) =>
         this.setState({
-          user: data,
-        });
-      });
+          userData,
+        })
+      );
   };
 
-render () {
+  render() {
     return (
-        <div className="page">
-  <header className="header">
-      <UserMenu userData={this.state.name.userData} />
-  </header>
-  <UserProfile userData={this.state.name.userData} />
-  </div>
-    )
-}
+      <div className="page">
+        <header className="header">
+          <UserMenu userData={this.state.name.userData} />
+        </header>
+        <UserProfile userData={this.state.name.userData} />
+      </div>
+    );
+  }
 }
 export default Page;
