@@ -1,5 +1,5 @@
 // опишите компоненту которая принимает имя пользователя и загружет его данные. АРР должна отрисовать хедер с UserMenu, UserProfile 
-import React, { Component} from "react";
+import React, { Component } from "react";
 import UserProfile from "./UserProfile.jsx";
 import UserMenu from "./UserMenu.jsx";
 
@@ -7,8 +7,9 @@ class Page extends Component {
   state = {
     userData: null,
   };
+
   componentDidMount() {
-    this.fetchUser(this.props.userId);
+    this.fetchUserData(this.props.userId);
   }
 
   fetchUserData = (userId) => {
@@ -26,11 +27,12 @@ class Page extends Component {
     return (
       <div className="page">
         <header className="header">
-          <UserMenu userData={this.state.name.userData} />
+          <UserMenu userData={this.state.userData} />
         </header>
-        <UserProfile userData={this.state.name.userData} />
+        <UserProfile userData={this.state.userData} />
       </div>
     );
   }
 }
+
 export default Page;

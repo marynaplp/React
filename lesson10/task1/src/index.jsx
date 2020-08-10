@@ -6,4 +6,4 @@ import "./index.scss";
 const rootElement = document.querySelector("#root");
 
 
-ReactDOM.render(<App userId="git" />, rootElement);;
+ReactDOM.render(<App userId="github" />, rootElement);;
