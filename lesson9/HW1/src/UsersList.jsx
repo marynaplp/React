@@ -11,13 +11,13 @@ class UsersList extends Component {
     };
   }
   onChange = (event) => {
-    console.log(event.target.value);
-    this.setState({ value: event.target.value }); // колбек который передает изменения из инпута в компонету UsersList
+  this.setState({ value: event.target.value }); // колбек который передает изменения из инпута в компонету UsersList
   };
   render() {
     const usersList = this.props.users
-      .filter((user) =>
-        user.name.toLowerCase().includes(this.props.users.toLowerCase())
+      .filter(
+        (user) =>
+          user.name.toLowerCase().includes(this.state.name.toLowerCase()) //компонента UsersList должна отображать отфильтрованных пользователей
       )
       .map((user) => <User {...user} key={user.id} />);
 
@@ -28,7 +28,7 @@ class UsersList extends Component {
           filterText={this.state.name}
           count={usersList}
         />
-        <ul className="users">{usersList}</ul>
+        <ul className="users">{usersList.length}</ul>
       </div>
     );
   }
