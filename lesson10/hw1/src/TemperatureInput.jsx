@@ -26,3 +26,4 @@ class TemperatureInput extends Component {
     );
   }
 }
+export default TemperatureInput
