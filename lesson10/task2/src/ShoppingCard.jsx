@@ -25,8 +25,8 @@ render() {
     const count = this.state.cardItems.length;
     return(
            <div className="column">
-                <CartTitle userName={this.props.userName} count={count} />
-                <ProductsList cartItems={this.state.cartItems} />
+                <CardTitle userName={this.props.userName} count={count} />
+                <ProductList cartItems={this.state.cartItems} />
             </div>
     )
 }
