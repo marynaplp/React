@@ -1,6 +1,6 @@
 // опишите компоненту которая принимает обьект пользователя в свойстве userData и отрисовует поля для редактирования lastName and firstName. UserForm  не должна сама хранить состояния. а должна изменять данные пользователя, который хранится в App
 
-import React, {Componet} from "react";
+import React from "react";
 
 
 const UserForm = ({firstName, lastName, handleChange }) =>{
@@ -12,4 +12,4 @@ const UserForm = ({firstName, lastName, handleChange }) =>{
     )
 }
 
-const UserForm 
+export default UserForm; 
