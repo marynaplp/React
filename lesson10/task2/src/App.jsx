@@ -3,10 +3,10 @@ import React, { Component } from "react";
 import ShoppingCart from "./ShoppingCart.jsx";
 import Profile from "./Profile.jsx";
 
-class App extends Component {
+class Page extends Component {
   state = {
-    firstName: "Maryna",
-    lastName: "Pylypchenko",
+    firstName: "John",
+    lastName: "Doe",
   };
 
   handleChange = (event) => {
@@ -32,4 +32,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Page;
