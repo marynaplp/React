@@ -1,14 +1,9 @@
 //displays and filters the data collection based on user input; needs to filter the product list based on state and 
 import React from "react";
-import ProductCategoryRow from "./ProductCategoryRow.jsx";
-import ProductRow from "./ProductRow.jsx";
+import ProductCategoryRow from "./ProductCategoryRow";
+import ProductRow from "./ProductRow";
 
 const ProductTable = ({ filterText, inStockOnly, products }) => {
-  // const { filterText } = this.props.filterText;
-  // const { inStockOnly } = this.props.inStockOnly;
-  console.log(products);
-  console.log(inStockOnly);
-
   const rows = [];
   let lastCategory = null;
 

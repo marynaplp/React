@@ -1,40 +1,38 @@
 // receives all user input; needs to display the search text and checked state.
-import React, { Component } from  'react';
+import React from "react";
 
-class SearchBar extends Component {
-  constructor(props) {
-    super(props);
-    this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
-    this.handleInStockChange = this.handleInStockChange.bind(this);
-  }
+const SearchBar = ({
+  onFilterTextChange,
+  onInStockChange,
+  filterText,
+  inStockOnly,
+}) => {
+  const handleFilterTextChange = (e) => {
+    onFilterTextChange(e.target.value);
+  };
 
-  handleFilterTextChange(e) {
-    this.props.onFilterTextChange(e.target.value);
-  }
+  const handleInStockChange = (e) => {
+    onInStockChange(e.target.checked);
+  };
 
-  handleInStockChange(e) {
-    this.props.onInStockChange(e.target.checked);
-  }
-
-  render() {
-    return (
-      <form>
+  return (
+    <form>
+      <input
+        type="text"
+        placeholder="Search..."
+        value={filterText}
+        onChange={handleFilterTextChange}
+      />
+      <p>
         <input
-          type="text"
-          placeholder="Search..."
-          value={this.props.filterText}
-          onChange={this.handleFilterTextChange}
-        />
-        <p>
-          <input
-            type="checkbox"
-            checked={this.props.inStockOnly}
-            onChange={this.handleInStockChange}
-          />{" "}
-          Only show products in stock
-        </p>
-      </form>
-    );
-  }
-}
-export default SearchBar
+          type="checkbox"
+          checked={inStockOnly}
+          onChange={handleInStockChange}
+        />{" "}
+        Only show products in stock
+      </p>
+    </form>
+  );
+};
+
+export default SearchBar;
