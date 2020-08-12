@@ -16,10 +16,10 @@ const Dialog = ({ isOpen, children, title}, onClose) => {
 }
 
 Dialog.propTypes ={
-    isOpen:PropType.bool,
+    isOpen: PropType.bool,
     children :PropType.element,
-    title:PropTypes.string,
-    onClose:Proptypes.func.isRequired
+    title: PropTypes.string,
+    onClose: PropTypes.func.isRequired
 }
 Dialog.defaultProps ={
     isOpen: false,
