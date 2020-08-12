@@ -9,7 +9,7 @@ class Page extends Component {
   };
 
   componentDidMount() {
-    this.fetchUserData(this.props.userId);
+    this.fetchUserData(this.props.userId); // 
   }
 
   fetchUserData = (userId) => {
@@ -17,7 +17,7 @@ class Page extends Component {
     fetch(userUrl)
       .then((response) => response.json())
       .then((userData) =>
-        this.setState({
+        this.setState({ //визван  setStateи реакт занет что нужно  перерисовать картинку 
           userData,
         })
       );
@@ -29,7 +29,8 @@ class Page extends Component {
         <header className="header">
           <UserMenu userData={this.state.userData} />
         </header>
-        <UserProfile userData={this.state.userData} />
+        <UserProfile userData={this.state.userData}// userData попадает в UserProfile from this.state.userdata
+         />
       </div>
     );
   }

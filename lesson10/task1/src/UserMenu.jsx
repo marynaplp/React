@@ -8,7 +8,7 @@ const UserMenu = ({ userData }) => {
     return null;
   }
 
-  const { name, avatar_url } = userData;
+  const { name, avatar_url } = userData;// деструктиризация чтобы достать  нужнуж инфу
   return (
     <div className="menu">
       <span className="menu__greeting">{name}</span>
