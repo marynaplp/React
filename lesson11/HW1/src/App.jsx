@@ -1,30 +1,33 @@
 // опишите компоненту которая   содержит компоненту которая содержит кнопку для показа диалога и хранит состояние диалога(закрит/открыт)
 import React, { Component } from "react";
-import Dialog from "./Dialog.jsx"
 
-
+import Expand from "./Expand.jsx";
 
 class App extends Component {
   state = {
-    number:0, 
+    isOpen: false,
   };
-  componentDidMount() {
-    this.intervalId = setInterval(() =>{
-      this.setState({
-        number: this.state.number + 1
-      })
-    }, 1000);
-  }
-  componentWillUnmount() {// очистка за собой когда компонеты уходят из строници
-    clearInterval(this.intervalId);
-  }
-  render(){
+
+  hideDialog = () => {
+    this.setState({
+      isOpen: false,
+    });
+  };
+
+  showDialog = () => {
+    this.setState({
+      isOpen: true,
+    });
+  };
+
+  render() {
+    <p>
+      Hooks are a new addition in React 16.8. They let you use state and other
+      React features without writing a class.
+    </p>;
     return (
       <div className="app">
-        <EvenNumbers title="Even numbers" number={this.state.number} />
-        <Numbers title="All numbers" number={10} />
-        <OddNumbers title="Odd numbers" number={this.state.number} />
-        <Numbers title="All numbers" number={this.state.number} />
+          <Expand title="Some title">{text}</Expand>
       </div>
     );
   }
