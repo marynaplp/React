@@ -1,7 +1,7 @@
 // contains the entirety of the example
-import React, { Component} from "react";
+import React, { Component } from "react";
 import SearchBar from "./SearchBar.jsx";
-import ProductTable from "./ProductTable.jsx"
+import ProductTable from "./ProductTable.jsx";
 
 class FilterableProductTable extends Component {
   constructor(props) {
@@ -10,40 +10,38 @@ class FilterableProductTable extends Component {
       filterText: "",
       inStockOnly: false,
     };
-
-    this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
-    this.handleInStockChange = this.handleInStockChange.bind(this);
   }
 
-  handleFilterTextChange(filterText) {
+  handleFilterTextChange = (filterText) => {
     this.setState({
-      filterText: filterText,
+      filterText,
     });
-  }
+  };
 
-  handleInStockChange(inStockOnly) {
+  handleInStockChange = (inStockOnly) => {
     this.setState({
-      inStockOnly: inStockOnly,
+      inStockOnly,
     });
-  }
+  };
 
   render() {
+    const { filterText, inStockOnly } = this.state;
     return (
       <div>
         <SearchBar
-          filterText={this.state.filterText}
-          inStockOnly={this.state.inStockOnly}
+          filterText={filterText}
+          inStockOnly={inStockOnly}
           onFilterTextChange={this.handleFilterTextChange}
           onInStockChange={this.handleInStockChange}
         />
         <ProductTable
           products={this.props.products}
-          filterText={this.state.filterText}
-          inStockOnly={this.state.inStockOnly}
+          filterText={filterText}
+          inStockOnly={inStockOnly}
         />
       </div>
     );
   }
 }
 
-export default FilterableProductTable
+export default FilterableProductTable;

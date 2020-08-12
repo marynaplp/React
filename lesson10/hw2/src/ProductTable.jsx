@@ -1,36 +1,47 @@
 //displays and filters the data collection based on user input; needs to filter the product list based on state and 
-import React, { Component } from "react";
-import ProductCategoryRow from "./ProductCategoryRow";
-import ProductRow from "./ProductRow";
+import React from "react";
+import ProductCategoryRow from "./ProductCategoryRow.jsx";
+import ProductRow from "./ProductRow.jsx";
 
-class ProductTable extends Component {
-  render() {
-    const rows = [];
-    let lastCategory = null;
+const ProductTable = ({ filterText, inStockOnly, products }) => {
+  // const { filterText } = this.props.filterText;
+  // const { inStockOnly } = this.props.inStockOnly;
+  console.log(products);
+  console.log(inStockOnly);
 
-    this.props.products.forEach((product) => {
-      if (product.category !== lastCategory) {
-        rows.push(
-          <ProductCategoryRow
-            category={product.category}
-            key={product.category}
-          />
-        );
-      }
-      rows.push(<ProductRow product={product} key={product.name} />);
-      lastCategory = product.category;
-    });
+  const rows = [];
+  let lastCategory = null;
 
-    return (
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>{rows}</tbody>
-      </table>
-    );
-  }
-}
+  products.forEach((product) => {
+    if (product.name.indexOf(filterText) === -1) {
+      return;
+    }
+    if (inStockOnly && !product.stocked) {
+      return;
+    }
+    if (product.category !== lastCategory) {
+      rows.push(
+        <ProductCategoryRow
+          category={product.category}
+          key={product.category}
+        />
+      );
+    }
+    rows.push(<ProductRow product={product} key={product.name} />);
+    lastCategory = product.category;
+  });
+
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>{rows}</tbody>
+    </table>
+  );
+};
+
+export default ProductTable;
