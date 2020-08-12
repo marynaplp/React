@@ -31,7 +31,3 @@ onShow =() =>{
 }
 
 export default Expand;
-
-
-
-export default Expand
