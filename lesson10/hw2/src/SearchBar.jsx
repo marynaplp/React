@@ -1,7 +1,7 @@
 // receives all user input; needs to display the search text and checked state.
 import React, { Component } from  'react';
 
-class SearchBar extends React.Component {
+class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
