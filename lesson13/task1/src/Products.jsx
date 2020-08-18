@@ -5,7 +5,7 @@ function Products() {
     return (
         <div className="page__content">
             <h1>Products</h1>
-            <p> we will add some products. Later...😇</p>
+            <p> we will add some products. Later... 😇</p>
             <Link to="/contacts">Contacts</Link>
         </div>
     )
