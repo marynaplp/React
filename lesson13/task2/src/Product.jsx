@@ -1,11 +1,10 @@
 import React from "react";
-import {useParams} from "react-router-dom"
+//import {useParams} from "react-router-dom"
 
-function Product() {
-    const {productId} = useParams (); 
+function Product({match}) {
     return (
         <div className="product">
-            {`Product is a ${productId}`}
+            {`Product is a ${match.params.productId}`}
         </div>
     )
 }
