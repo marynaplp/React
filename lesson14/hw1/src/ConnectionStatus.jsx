@@ -7,12 +7,12 @@ const ConnectionStatus= () => {
   );
   useEffect(() => {
     const Online = (e) =>{
-setStatus(e.target);
+setStatus(e.type);
     };
 window.addEventListener("online", Online);
   
     const Offline = (e) => {
-      setStatus(e.target)
+      setStatus(e.type)
     }
     window.addEventListener("offline", Offline);
     return () => {
