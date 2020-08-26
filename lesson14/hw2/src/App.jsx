@@ -1,5 +1,5 @@
 import React from "react";
-import Clock from "./Clock.js";
+import Clock from "./Clock.jsx";
 
 const App = () => {
     return (

@@ -2,7 +2,7 @@ import React, {useEffect, useState } from "react";
 import "./index.scss";
 
 
-const getTimewithOffset = offset => {
+const getTimeWithOffset = (offset) => {
     const currentTime = new Date();
     const utcOffset = currentTime.getTimezoneOffset() / 60
     return new Date(currentTime.setHours(currentTime.getHours() + offset + utcOffset));
@@ -13,7 +13,7 @@ const Clock = ({location, offset}) => {
 
 useEffect(() => {
     const timeZone = setInterval(() => {
-        setClock (getTimewithOffset(offset).toLocaleTimeString());
+        setClock (getTimeWithOffset(offset).toLocaleTimeString());
  }, 1000);  
 return () => {
     clearInterval(timeZone)
